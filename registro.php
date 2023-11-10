@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+
 <?php
 $filename = "usuarios.txt";
 
@@ -20,18 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             // Verificar si hay suficientes elementos en el array antes de acceder a $fields[4]
             if (isset($fields[4]) && $fields[4] == $usuario) {
-                echo "<html><head><title>Error de Registro</title></head><body>";
-                echo "<p>Nombre de usuario ya registrado. Por favor, elige otro. <a href='registro.html'>Volver al registro</a>.</p>";
-                echo "</body></html>";
-                exit(); // Importante salir del script después de mostrar el mensaje de error
+                echo "Nombre de usuario ya registrado. Por favor, elige otro.";
+                exit();
             }
         }
     }
 
     file_put_contents($filename, $data, FILE_APPEND | LOCK_EX);
 
-    echo "<html><head><title>Registro Exitoso</title></head><body>";
-    echo "<p>Registro exitoso. Ahora puedes <a href='inicio.html'>iniciar sesión</a>.</p>";
-    echo "</body></html>";
+    echo "Registro exitoso. Ahora puedes <a href='inicio.html'>iniciar sesión</a>.";
 }
 ?>
+
+</body>
+</html>
