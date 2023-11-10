@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Registro</h1>
+    <form action="registro.php" method="POST">
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" required>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label for="mail">Mail:</label>
+        <input type="email" name="mail" required>
+
+        <label for="curso">Curso:</label>
+        <select name="curso" required>
+            <option value="1r ESO">1r ESO</option>
+            <option value="2n ESO">2n ESO</option>
+            <option value="3r ESO">3r ESO</option>
+            <option value="4t ESO">4t ESO</option>
+            <option value="1r Batx">1r Batx</option>
+            <option value="2n Bat">2n Bat</option>
+            <option value="CFGM">CFGM</option>
+            <option value="CFGS">CFGS</option>
+        </select>
+
+        <label for="usuario">Nombre Usuario:</label>
+        <input type="text" name="usuario" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" required>
+
+        <label for="confirm_password">Repetir Contraseña:</label>
+        <input type="password" name="confirm_password" required>
+
+        <input type="submit" value="Registrarse">
+    </form>
+</body>
+</html>
